@@ -15,10 +15,15 @@ export default function RootLayout({ children }) {
 			<h1 className={"text-base sm:text-lg textGradient " + fugaz.className}>
 				Moodle
 			</h1>
+			<div className="flex items-center justify-between">Placeholder</div>
 		</header>
 	);
 
-	const footer = <footer className="p-4 sm:p-8">This is the footer</footer>;
+	const footer = (
+		<footer className={`p-4 sm:p-8 grid place-items-center`}>
+			<p className={`text-indigo-500 ${fugaz.className}`}>Made with 💛</p>
+		</footer>
+	);
 
 	return (
 		<html lang="en">
