@@ -1,3 +1,7 @@
+"use client";
+
+import React, { useState } from "react";
+
 import { baseRating, gradients } from "@/utils";
 
 const months = {
@@ -28,33 +32,36 @@ const dayList = [
 	"Saturday",
 ];
 
-const data = {
-	15: 2,
-	16: 4,
-	17: 1,
-	18: 3,
-	19: 5,
-	20: 2,
-	21: 4,
-	22: 1,
-	23: 3,
-	24: 5,
-};
-
 function Calender(props) {
-	const { demo } = props;
+	const now = new Date();
+	const currMonth = now.getMonth();
+	const [selectedMonth, setSelectedMonth] = useState(
+		Object.keys(months)[currMonth]
+	);
+	const [selectedYear, setSelectedYear] = useState(now.getFullYear());
 
-	const year = 2024;
+	function handleIncrementMonth(val) {
+		// value +1 -1
+		// if we hit the bounds of the months, then we can just adjust the year that is displayed instead
+	}
 
-	const month = "July";
+	const { demo, data, handleSetMood } = props;
 
-	const monthNow = new Date(year, Object.keys(months).indexOf(month), 1);
+	// const year = 2024;
+
+	// const month = "July";
+
+	const monthNow = new Date(
+		selectedYear,
+		Object.keys(months).indexOf(selectedMonth),
+		1
+	);
 
 	const firstDayOfMonth = monthNow.getDay();
 
 	const daysInMonth = new Date(
-		year,
-		Object.keys(month).indexOf(month) + 1,
+		selectedYear,
+		Object.keys(selectedMonth).indexOf(selectedMonth) + 1,
 		0
 	).getDate();
 
@@ -95,8 +102,8 @@ function Calender(props) {
 									key={dayOfWeekIndex}
 									className={
 										"text-xs sm:text-sm border border-solid p-2 flex items-center gap-2 justify-between rounded-lg " +
-										(isToday ? "border-indigo-400" : "border-indigo-100 ") +
-										(color == "white" ? "text-indigo-400" : "text-white")
+										(isToday ? "border-indigo-400 " : "border-indigo-100 ") +
+										(color == "white" ? "text-indigo-400 " : "text-white ")
 									}
 								>
 									<p>{dayIndex}</p>

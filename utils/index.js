@@ -56,18 +56,6 @@ export const gradients = {
 	],
 };
 
-export const demoData = {
-	15: 2,
-	16: 4,
-	17: 1,
-	18: 3,
-	19: 5,
-	20: 2,
-	21: 4,
-	22: 1,
-	23: 3,
-	24: 5,
-};
 export const baseRating = {
 	0: 2,
 	1: 5,
@@ -113,4 +101,17 @@ export const baseRating = {
 	41: 4,
 	42: 1,
 	43: 3,
+};
+
+export const demoData = {
+	15: 2,
+	16: 4,
+	17: 1,
+	18: 3,
+	19: 5,
+	20: 2,
+	21: 4,
+	22: 1,
+	23: 3,
+	24: 5,
 };
