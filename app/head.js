@@ -8,6 +8,7 @@ function Head() {
 				crossOrigin="anonymous"
 				referrerPolicy="no-referrer"
 			/>
+			<link rel="icon" href="/favicon.png" type="image/png" />
 		</head>
 	);
 }
