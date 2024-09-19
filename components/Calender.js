@@ -33,6 +33,7 @@ const dayList = [
 ];
 
 function Calender(props) {
+	const { demo, completeData, handleSetMood } = props;
 	const now = new Date();
 	const currMonth = now.getMonth();
 	const [selectedMonth, setSelectedMonth] = useState(
@@ -40,12 +41,13 @@ function Calender(props) {
 	);
 	const [selectedYear, setSelectedYear] = useState(now.getFullYear());
 
+	const numericMonth = Object.keys(months).indexOf(selectedMonth);
+	const data = completeData?.[selectedYear]?.[numericMonth] || {};
+	console.log("This months data", completeData?.[selectedYear]?.[numericMonth]);
 	function handleIncrementMonth(val) {
 		// value +1 -1
 		// if we hit the bounds of the months, then we can just adjust the year that is displayed instead
 	}
-
-	const { demo, data, handleSetMood } = props;
 
 	// const year = 2024;
 
