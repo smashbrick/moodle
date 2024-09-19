@@ -1,6 +1,6 @@
 # Moodle
 
-[Link to Website](google.com)
+[Link to Website](https://moodle-smash.netlify.app/)
 
 **Moodle** is a beautiful and responsive web application built with **Next.js** and **Tailwind CSS**, designed to help users track their mood over time. With seamless **Firebase** integration for authentication and data storage, Moodle lets users log their daily mood and provides insightful analytics on how their mood changes over weeks, months, and even years.
 
@@ -23,7 +23,7 @@
 1. Clone the repository, install dependencies, create the `.env.local` file, and run the development server:
 
    ```bash
-   git clone [Your-Repository-URL]
+   git clone [https://github.com/smashbrick/moodle.git]
    cd moodle
    npm install
 
