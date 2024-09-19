@@ -4,6 +4,7 @@ import { Open_Sans, Fugaz_One } from "next/font/google";
 import Link from "next/link";
 
 import Head from "./head";
+import Logout from "@/components/Logout";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
 					Moodle
 				</h1>
 			</Link>
-			<div className="flex items-center justify-between">Placeholder</div>
+			<Logout />
 		</header>
 	);
 

@@ -1,7 +1,8 @@
 import { Fugaz_One } from "next/font/google";
 import Button from "./Button";
 import Calender from "./Calender";
-import Link from "next/link";
+// import Link from "next/link";
+import CallToAction from "./CallToAction";
 const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
 
 function Hero() {
@@ -21,14 +22,7 @@ function Hero() {
 			</p>
 
 			{/* w-fit ensures the button only takes up the space it needs, essentially fitting the content */}
-			<div className="grid grid-cols-2 gap-4 w-fit mx-auto">
-				<Link href={"/dashboard"}>
-					<Button text="Sign Up" />
-				</Link>
-				<Link href={"/dashboard"}>
-					<Button text="Login" dark />
-				</Link>
-			</div>
+			<CallToAction demo />
 			<Calender demo />
 		</div>
 	);
